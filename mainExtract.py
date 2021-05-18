@@ -2,6 +2,7 @@ import PyPDF2
 import sys
 from FileMerger import fileMerge
 
+global again
 
 def textExtractor():
     i = 0
@@ -29,8 +30,10 @@ textExtractor()
 
 again = input("Complete! Would you like to input another file? ")
 
-if again == 'yes':
+
+while again == 'yes':
     textExtractor()
+    again = input("Complete! Would you like to input another file? ")
 if again == 'no':
 
     cont = input('Extraction completed! Would you like to merge files? ')
